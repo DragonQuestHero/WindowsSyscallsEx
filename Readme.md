@@ -22,4 +22,4 @@
 	<br>
 </h1>
 
-######(详情:https://github.com/DragonQuestHero/WindowsSyscallsEx/blob/master/GetKernelBase/Main.cc#L290)
+###### (详情:https://github.com/DragonQuestHero/WindowsSyscallsEx/blob/master/GetKernelBase/Main.cc#L290)
