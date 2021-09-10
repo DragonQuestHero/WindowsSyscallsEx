@@ -23,3 +23,5 @@
 </h1>
 
 ###### (详情:https://github.com/DragonQuestHero/WindowsSyscallsEx/blob/master/GetKernelBase/Main.cc#L290)
+
+##### 部分情况下 因为系统小版本不同会出现偏移不一致的情况 所以尽量以小版本为准
