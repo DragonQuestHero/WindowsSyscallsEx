@@ -24,21 +24,21 @@ BOOL PsymEnumeratesymbolsCallback(
 int main()
 {
     SymSetOptions(SYMOPT_LOAD_LINES | SYMOPT_FAVOR_COMPRESSED);
-    if (!SymInitialize(GetCurrentProcess(), NULL, FALSE))
+    if (!SymInitialize(GetCurrentProcess(), "SRV*http://msdl.microsoft.com/download/symbols", FALSE))//"SRV*http://msdl.microsoft.com/download/symbols"
     {
         std::cout << "error";
         getchar();
     }
 
     OFSTRUCT ReOpenBuff;
-    HANDLE file_handle = (HANDLE)OpenFile("C:\\Windows\\System32\\ntoskrnl.exe", &ReOpenBuff, OF_READ);
+    HANDLE file_handle = (HANDLE)OpenFile("C:\\Users\\Administrator\\Desktop\\ntoskrnl.exe", &ReOpenBuff, OF_READ);
 
 
     DWORD Needed;
 	ULONG64 Base[1024];
     EnumDeviceDrivers((LPVOID*)Base, sizeof(Base), &Needed);
 
-    ULONG64 base_addr = SymLoadModuleEx(GetCurrentProcess(), file_handle, "C:\\Windows\\System32\\ntoskrnl.exe", nullptr, Base[0], 0, 0, 0);
+    ULONG64 base_addr = SymLoadModuleEx(GetCurrentProcess(), file_handle, "C:\\Users\\Administrator\\Desktop\\ntoskrnl.exe", nullptr, Base[0], 0, 0, 0);
 
 
     log_file.open("log.txt",std::ios::out);
