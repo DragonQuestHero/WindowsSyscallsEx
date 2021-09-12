@@ -2,7 +2,7 @@
 
 #### Quick check of NT kernel exported&unexported functions/global variable offset
 
-###### System目录下有已经完成的偏移 可以在线速查
+###### System目录下有已经完成的偏移 可以在线速查(谁用到其他版本麻烦顺手提交一下PR
 
 ###### There are already completed offsets in the System directory, which can be quick checked online
 
